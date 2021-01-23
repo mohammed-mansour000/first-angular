@@ -168,15 +168,15 @@ __webpack_require__.r(__webpack_exports__);
 
 class DirectorComponent {
     constructor() {
-        this.data = new _Model_DataApiObject__WEBPACK_IMPORTED_MODULE_1__["DataApiObjectDirector"](0, "any", "any", "any");
+        this.data = new _Model_DataApiObject__WEBPACK_IMPORTED_MODULE_1__["DataApiObjectDirector"](0, "any", "any", "any", "any");
     }
     ngOnInit() {
     }
 }
 DirectorComponent.ɵfac = function DirectorComponent_Factory(t) { return new (t || DirectorComponent)(); };
-DirectorComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: DirectorComponent, selectors: [["app-director"]], inputs: { data: "data" }, decls: 7, vars: 3, consts: [[1, "icon"], [1, "icofont-earth"], [1, "title"], [3, "href"], [1, "description"]], template: function DirectorComponent_Template(rf, ctx) { if (rf & 1) {
+DirectorComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: DirectorComponent, selectors: [["app-director"]], inputs: { data: "data" }, decls: 7, vars: 4, consts: [[1, "icon"], ["alt", "", 1, "rounded-circle", 3, "src"], [1, "title"], [3, "href"], [1, "description"]], template: function DirectorComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "i", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "img", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "h4", 2);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "a", 3);
@@ -187,13 +187,15 @@ DirectorComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefine
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate"]("src", ctx.data.image, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate"]("href", ctx.data.linkToWiki, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx.data.name);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx.data.works);
-    } }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJkaXJlY3Rvci5jb21wb25lbnQuY3NzIn0= */"] });
+    } }, styles: [".rounded-circle[_ngcontent-%COMP%]{\r\n    width: 100%;\r\n    max-height: 100%;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRpcmVjdG9yLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxXQUFXO0lBQ1gsZ0JBQWdCO0FBQ3BCIiwiZmlsZSI6ImRpcmVjdG9yLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIucm91bmRlZC1jaXJjbGV7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIG1heC1oZWlnaHQ6IDEwMCU7XHJcbn0iXX0= */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](DirectorComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -802,11 +804,12 @@ class DataApiObjectTeam {
     }
 }
 class DataApiObjectDirector {
-    constructor(id, name, works, linkToWiki) {
+    constructor(id, name, works, linkToWiki, image) {
         this.id = id;
         this.name = name;
         this.works = works;
         this.linkToWiki = linkToWiki;
+        this.image = image;
     }
 }
 
